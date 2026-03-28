@@ -67,7 +67,7 @@ function App() {
       <header className="border-b border-[hsl(var(--border))] bg-[hsl(var(--card))]/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-6">
               <div className="p-2 bg-[hsl(var(--primary))]/10 rounded-lg">
                 <TrendingUp className="w-6 h-6 text-[hsl(var(--primary))]" />
               </div>
@@ -75,7 +75,7 @@ function App() {
                 <h1 className="text-xl font-bold text-[hsl(var(--foreground))]">
                   Monte Carlo Pricer
                 </h1>
-                <p className="text-xs text-[hsl(var(--muted-foreground))]">
+                <p className="text-sm text-[hsl(var(--muted-foreground))]">
                   Options pricing via stochastic simulation
                 </p>
               </div>
@@ -99,8 +99,8 @@ function App() {
           {/* Left Panel - Controls */}
           <div className="lg:col-span-4 space-y-6">
             {/* Parameters */}
-            <div className="bg-[hsl(var(--card))] rounded-xl border border-[hsl(var(--border))] p-6">
-              <h2 className="text-lg font-semibold text-[hsl(var(--foreground))] mb-6 flex items-center gap-2">
+            <div className="bg-[hsl(var(--card))] rounded-2xl border border-[hsl(var(--border))] p-6">
+              <h2 className="text-lg font-semibold text-[hsl(var(--foreground))] mb-6 flex items-center gap-6">
                 <Settings className="w-5 h-5" />
                 Parameters
               </h2>
@@ -164,7 +164,7 @@ function App() {
             </div>
 
             {/* Simulation Settings */}
-            <div className="bg-[hsl(var(--card))] rounded-xl border border-[hsl(var(--border))] p-6">
+            <div className="bg-[hsl(var(--card))] rounded-2xl border border-[hsl(var(--border))] p-6">
               <h2 className="text-lg font-semibold text-[hsl(var(--foreground))] mb-6">
                 Simulation Settings
               </h2>
@@ -191,7 +191,7 @@ function App() {
                 />
 
                 {/* Option Type */}
-                <div className="flex gap-2">
+                <div className="flex gap-6">
                   <button
                     onClick={() => setOptionType('call')}
                     disabled={isRunning}
@@ -218,7 +218,7 @@ function App() {
 
                 {/* Toggles */}
                 <div className="space-y-3">
-                  <label className="flex items-center gap-3 cursor-pointer">
+                  <label className="flex items-center gap-6 cursor-pointer">
                     <input
                       type="checkbox"
                       checked={asianOption}
@@ -230,7 +230,7 @@ function App() {
                       Asian Option (average price)
                     </span>
                   </label>
-                  <label className="flex items-center gap-3 cursor-pointer">
+                  <label className="flex items-center gap-6 cursor-pointer">
                     <input
                       type="checkbox"
                       checked={useAntithetic}
@@ -242,7 +242,7 @@ function App() {
                       Antithetic Variates
                     </span>
                   </label>
-                  <label className="flex items-center gap-3 cursor-pointer">
+                  <label className="flex items-center gap-6 cursor-pointer">
                     <input
                       type="checkbox"
                       checked={useControlVariate}
@@ -259,11 +259,11 @@ function App() {
             </div>
 
             {/* Run Controls */}
-            <div className="flex gap-3">
+            <div className="flex gap-6">
               <button
                 onClick={handleRunSimulation}
                 disabled={isRunning}
-                className="flex-1 flex items-center justify-center gap-2 py-3 px-6 bg-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))]/90 text-white font-semibold rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex-1 flex items-center justify-center gap-6 py-3 px-6 bg-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))]/90 text-white font-semibold rounded-2xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isRunning ? (
                   <>
@@ -280,7 +280,7 @@ function App() {
               <button
                 onClick={handleReset}
                 disabled={isRunning}
-                className="p-3 bg-[hsl(var(--secondary))] hover:bg-[hsl(var(--secondary))]/80 text-[hsl(var(--foreground))] rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                className="p-5 bg-[hsl(var(--secondary))] hover:bg-[hsl(var(--secondary))]/80 text-[hsl(var(--foreground))] rounded-2xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <RotateCcw className="w-5 h-5" />
               </button>
@@ -329,7 +329,7 @@ function App() {
       {/* Footer */}
       <footer className="border-t border-[hsl(var(--border))] mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[hsl(var(--muted-foreground))]">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 text-sm text-[hsl(var(--muted-foreground))]">
             <p>Monte Carlo Options Pricer — Educational purposes only</p>
             <p>
               Made by{' '}
