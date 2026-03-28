@@ -331,7 +331,17 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[hsl(var(--muted-foreground))]">
             <p>Monte Carlo Options Pricer — Educational purposes only</p>
-            <p>Built with React, TypeScript, and Plotly</p>
+            <p>
+              Made by{' '}
+              <a 
+                href="https://github.com/sharziki" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[hsl(var(--primary))] hover:underline"
+              >
+                Sharvil Saxena
+              </a>
+            </p>
           </div>
         </div>
       </footer>
